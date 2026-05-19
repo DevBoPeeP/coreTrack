@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"/>
+<style>
+  body{font-family:Arial,sans-serif;background:#f4f4f4;margin:0;padding:0}
+  .container{max-width:600px;margin:30px auto;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+  .header{background:#7C3AED;color:#fff;padding:24px 32px}
+  .header h1{margin:0;font-size:22px}
+  .body{padding:32px;color:#333}
+  .body p{line-height:1.6}
+  .comment-card{background:#F5F3FF;border-left:4px solid #7C3AED;padding:16px;margin:20px 0;border-radius:4px;font-style:italic;color:#555}
+  .footer{background:#F3F4F6;padding:16px 32px;font-size:12px;color:#9CA3AF;text-align:center}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header"><h1>💬 You Were Mentioned</h1></div>
+  <div class="body">
+    <p>Hi <strong th:text="${recipientName}">User</strong>,</p>
+    <p><strong th:text="${authorName}">Someone</strong> mentioned you in a comment on task <strong th:text="${taskTitle}">Task</strong>:</p>
+    <div class="comment-card">"<span th:text="${commentPreview}">Comment content...</span>"</div>
+    <p>Log in to TMS to view and reply to the comment.</p>
+  </div>
+  <div class="footer">© TMS Notifications</div>
+</div>
+</body>
+</html>

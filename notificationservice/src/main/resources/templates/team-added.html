@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"/>
+<style>
+  body{font-family:Arial,sans-serif;background:#f4f4f4;margin:0;padding:0}
+  .container{max-width:600px;margin:30px auto;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+  .header{background:#0EA5E9;color:#fff;padding:24px 32px}
+  .header h1{margin:0;font-size:22px}
+  .body{padding:32px;color:#333}.body p{line-height:1.6}
+  .card{background:#F0F9FF;border-left:4px solid #0EA5E9;padding:16px;margin:20px 0;border-radius:4px}
+  .footer{background:#F3F4F6;padding:16px 32px;font-size:12px;color:#9CA3AF;text-align:center}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header"><h1>👥 Added to a Team</h1></div>
+  <div class="body">
+    <p>Hi <strong th:text="${recipientName}">User</strong>,</p>
+    <p>You have been added to a new team on TMS.</p>
+    <div class="card"><strong>Team:</strong> <span th:text="${teamName}">Team Name</span></div>
+    <p>Log in to TMS to meet your team and start collaborating.</p>
+  </div>
+  <div class="footer">© TMS Notifications</div>
+</div>
+</body>
+</html>

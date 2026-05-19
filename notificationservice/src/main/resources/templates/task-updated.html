@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Task Updated</title>
+    <style>
+        body { font-family: Arial, sans-serif; background:#f4f4f4; margin:0; padding:0; }
+        .container { max-width:600px; margin:40px auto; background:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+        .header { background:#2563eb; padding:30px; text-align:center; }
+        .header h1 { color:#ffffff; margin:0; font-size:24px; }
+        .body { padding:30px; color:#333333; }
+        .body p { line-height:1.6; margin:0 0 16px; }
+        .task-box { background:#f0f4ff; border-left:4px solid #2563eb; padding:16px 20px; border-radius:4px; margin:20px 0; }
+        .task-box p { margin:0; font-weight:bold; color:#1e40af; }
+        .footer { background:#f9fafb; padding:20px; text-align:center; font-size:12px; color:#9ca3af; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>✏️ Task Updated</h1>
+    </div>
+    <div class="body">
+        <p>Hi <strong th:text="${recipientName}">User</strong>,</p>
+        <p>A task you are associated with has been updated:</p>
+        <div class="task-box">
+            <p th:text="${taskTitle}">Task Title</p>
+        </div>
+        <p>Log in to TMS to see the latest changes.</p>
+    </div>
+    <div class="footer">
+        <p>© 2026 TMS · You're receiving this because you have notifications enabled.</p>
+    </div>
+</div>
+</body>
+</html>
